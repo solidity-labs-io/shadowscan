@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ShadowScan · Safe shadow-owner detection</title>
+  <meta name="description" content="ShadowScan finds Safe owners and modules that getOwners() can't see, by diffing each Safe's on-chain storage root against its public state." />
+  <meta name="color-scheme" content="dark" />
+  <meta name="theme-color" content="#000000" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="ShadowScan" />
+  <meta property="og:title" content="ShadowScan · Safe shadow-owner detection" />
+  <meta property="og:description" content="Finds Safe owners and modules that getOwners() can't see." />
+  <meta property="og:image" content="https://elliotfriedman.github.io/shadowscan-web/assets/favicon-180.png" />
+  <meta name="twitter:card" content="summary" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+  <link rel="apple-touch-icon" href="assets/favicon-180.png" />
+  <link rel="preload" href="assets/fonts/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="dashboard.css" />
+</head>
+<body class="page-dashboard">
+  <main class="wrap">
+    <header class="site-header">
+      <a class="brand" href="./">
+        <img class="brand-mark" src="assets/mark.png" width="32" height="32" alt="" />
+        <div class="brand-text">
+          <h1 class="brand-name">ShadowScan</h1>
+          <span class="brand-by">by Solidity Labs</span>
+        </div>
+      </a>
+      <form class="header-search" id="search" role="search" novalidate>
+        <div class="search">
+          <label class="visually-hidden" for="safe-search">Safe address</label>
+          <input class="input" id="safe-search" type="text" placeholder="Safe address (0x…)"
+                 autocomplete="off" spellcheck="false" />
+          <button class="btn btn-primary" type="submit">Search</button>
+        </div>
+        <span class="search-err error-line" id="search-err" aria-live="polite"></span>
+      </form>
+      <div class="header-end">
+        <span class="pill" id="health">Checking</span>
+      </div>
+    </header>
+    <p class="tagline">Finds Safe owners and modules that getOwners() can't see.</p>
+    <div class="error-line" id="err" role="status"></div>
+
+    <div id="dashboard"></div>
+  </main>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+  <script src="dashboard.js"></script>
+</body>
+</html>

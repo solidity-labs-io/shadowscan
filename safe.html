@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Safe detail · ShadowScan</title>
+  <meta name="description" content="Storage-root review, elimination verdict and live on-chain introspection for a single Safe." />
+  <meta name="color-scheme" content="dark" />
+  <meta name="theme-color" content="#000000" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="ShadowScan" />
+  <meta property="og:title" content="Safe detail · ShadowScan" />
+  <meta property="og:description" content="Finds Safe owners and modules that getOwners() can't see." />
+  <meta property="og:image" content="https://elliotfriedman.github.io/shadowscan-web/assets/favicon-180.png" />
+  <meta name="twitter:card" content="summary" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+  <link rel="apple-touch-icon" href="assets/favicon-180.png" />
+  <link rel="preload" href="assets/fonts/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="detail.css" />
+</head>
+<body class="page-detail">
+  <main class="wrap">
+    <header class="site-header site-header--compact">
+      <a class="brand" href="./">
+        <img class="brand-mark" src="assets/mark.png" width="32" height="32" alt="" />
+        <span class="brand-text">
+          <span class="brand-name">ShadowScan</span>
+          <span class="brand-by">by Solidity Labs</span>
+        </span>
+      </a>
+      <div class="header-end">
+        <a class="back" href="./">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M19 12H5" /><path d="M11 6l-6 6 6 6" /></svg>
+          Dashboard
+        </a>
+      </div>
+    </header>
+    <div id="content"></div>
+  </main>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/js-sha3@0.9.3/build/sha3.min.js"
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer"></script>
+  <script src="lib/rpc.js"></script>
+  <script src="lib/safe-introspect.js"></script>
+  <script src="detail.js"></script>
+</body>
+</html>
